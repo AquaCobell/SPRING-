@@ -6,6 +6,8 @@ import com.nico.repository.UserRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +26,11 @@ public class NicoApplication {
 		List<Car> cars = Arrays.asList(mercedes,vw);
 		user.setAutos(cars);
 		userrepo.save(user);
+		User user2 = new User("reinhard");
+		userrepo.save(user2);
 
 	}
+
+
 
 }
